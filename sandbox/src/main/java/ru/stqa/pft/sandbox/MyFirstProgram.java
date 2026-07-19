@@ -1,5 +1,7 @@
 package ru.stqa.pft.sandbox;
 
+import ru.stqa.pft.sandbox.homework.Point;
+
 public class MyFirstProgram {
 
     public static void main(String[] args) {
@@ -22,6 +24,10 @@ public class MyFirstProgram {
         double y = 4;
         double h = 3;
         System.out.println("Площадь трапеции равна " + area(x, y, h));
+
+        Point p1 = new Point(1.0, 2.0);
+        Point p2 = new Point(4.0, 8.0);
+        System.out.println("Растояние между точками равно " + p1.distance(p2));
     }
 
     public static void hello(String somebody) {
