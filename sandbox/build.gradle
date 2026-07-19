@@ -1,3 +1,22 @@
-apply plugin: 'java'
-apply plugin: 'application'
-mainClassName = "MyFirstProgram"
+// Блок для
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // TestNG — фреймворк для тестирования программ на языке Java
+    implementation 'org.testng:testng:7.10.2' // Обновлено: версия 6.9.10 слишком старая для Java 11/17/21
+}
+
+application {
+    mainClass = 'ru.stqa.pft.sandbox.MyFirstProgramNew'
+}
+// БЛОК для того что бы явно указать Gradle, что для запуска тестов используется фреймворк TestNG:
+test {
+    useTestNG()
+}
