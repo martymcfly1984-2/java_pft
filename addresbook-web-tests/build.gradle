@@ -1,0 +1,20 @@
+// Блок для
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // TestNG — фреймворк для тестирования программ на языке Java
+    implementation 'org.testng:testng:7.10.2' // Обновлено: версия 6.9.10 слишком старая для Java 11/17/21
+    // Selenium-java
+    implementation 'org.seleniumhq.selenium:selenium-java:4.23.0'
+}
+
+// БЛОК для того что бы явно указать Gradle, что для запуска тестов используется фреймворк TestNG:
+test {
+    useTestNG()
+}
